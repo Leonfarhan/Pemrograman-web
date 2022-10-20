@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    margin: 6em;
+}
+
+.fotogambar{
+    display: block;
+    padding-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 5em;
+}
+
+.biodataku{
+    background-color: white;
+    border-radius: 2em;
+}
+
+.bio{
+    background-color: grey;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.container{
+    padding: 2em;
+}
+
+.form{
+    margin-top: 1.5em;
+}
+
+.container-biodata{
+    margin: 1.5em;
+}
+
+.perkenalan{
+    color: red;
+}
