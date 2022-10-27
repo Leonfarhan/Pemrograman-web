@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+body {
+  background: white;
+  margin: 0em;
+  font-family: "Titillium Web", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #005EB8;
+  --secondary-color: #E7FA19;
+}
+
+.navbar {
+  background: var(--primary-color);
+  padding: 2em;
+}
+.navbar .logo {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  font-size: 1em;
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 3em;
+  padding: 0;
+}
+
+section {
+  margin: 5em 3em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-co .primary-cta {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.6em 1.3em;
+  font-size: large;
+  border-radius: 1em;
+  font-weight: bold;
+  display: inline-block;
+}
+.left-co .watch-video-cta {
+  display: block;
+  margin-top: 0.5em;
+}
+.left-co .watch-video-cta img {
+  display: none;
+  margin-top: 0.5em;
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+.features-section {
+  background: var(--primary-color);
+  margin: auto;
+  color: white;
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 0.1em;
+  grid-template-columns: auto;
+}
+ul.features-list li {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  margin-left: 2.2em;
+  position: relative;
+}
+ul.features-list li:before {
+  content: " ";
+  left: -1.5em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("/webPortofolio/images/check.svg");
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.testimonials-section {
+  background: var(--primary-color);
+  padding: 1em;
+}
+.testimonials-section li {
+  background: #7D6E83;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  width: 75%;
+  margin: 0em auto 5em auto;
+  border-radius: 1em;
+}
+.testimonials-section li img {
+  width: 5em;
+  height: 5em;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border: 1.5px solid grey;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+}
+
+.send-message-cta {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 3em;
+  border-radius: 5em;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+nav.mobile-menu {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 55%;
+  right: 0;
+  top: 0;
+  background-color: grey;
+  height: 100vh;
+  padding: 0.8em;
+}
+nav ul.primary-nav {
+  margin-top: 3em;
+}
+nav li a {
+  color: white;
+  display: block;
+  padding: 0.3em;
+  font-size: 1.5em;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.project-img {
+  width: 100%;
+  margin-top: 2em;
+}
+
+/* media queries
+   fitur CSS3 yang memungkinkan rendering konten untuk beradaptasi dengan kondisi
+   yang berbeda seperti resolusi layar.
+*/
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+  }
+  .navbar nav a {
+    color: white;
+    font-size: 1em;
+    padding: 0.1em 2em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+    text-align: right;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  .section {
+    padding: 10em 4em;
+  }
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-co {
+    margin: 3em 3em 0 5em;
+  }
+  .hero .container h1 {
+    font-size: 2.3em;
+  }
+  .hero-img {
+    width: 30%;
+    margin-right: 2.3em;
+    margin-bottom: 4em;
+  }
+  .hero-cta {
+    display: block;
+  }
+  .primary-cta {
+    margin-right: 1em;
+  }
+  .play-img {
+    display: none;
+  }
+  .testimonials-section ul {
+    display: flex;
+  }
+  .testimonials-section ul li {
+    margin: 0 1em;
+  }
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: flex;
+  }
+  .contact-section .contact-left {
+    width: 500px;
+  }
+  .contact-section .message-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+  .contact-section .message-right iframe {
+    height: 80%;
+  }
+  .contact-section .send-message-cta {
+    width: 100%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=main.css.map */
