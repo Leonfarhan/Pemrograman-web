@@ -2,7 +2,7 @@
 
 include("config.php");
 
-// cek apakah tombol simpan sudah diklik atau blum?
+// cek apakah tombol simpan sudah diklik atau belum?
 if(isset($_POST['simpan'])){
 
     // ambil data dari formulir
@@ -20,8 +20,8 @@ if(isset($_POST['simpan'])){
 
     // apakah query update berhasil?
     if( $query ) {
-        // kalau berhasil alihkan ke halaman list-siswa.php
-        header('Location: list-siswa.php');
+        // kalau berhasil alihkan ke halaman list-karyawan.php
+        header('Location: list-karyawan.php');
     } else {
         // kalau gagal tampilkan pesan
         die("Gagal menyimpan perubahan...");
