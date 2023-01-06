@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News App | Farhan Alwahid</title>
+    <style>
+      /* Add some styling for the news articles */
+      h1 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      
+      .article {
+        border: 3px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+      }
+      .article h2 {
+        font-size: 18px;
+      }
+      .article p {
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LATEST NEWS</h1>
+    <div id="news-container"></div>
+    <script>
+      // Use fetch() to retrieve the news data from the API
+      fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-12-06&sortBy=publishedAt&apiKey=a3fe131a9ec14818ae1c047ace0ed653')
+        .then(response => response.json())
+        .then(data => {
+          // Loop through the articles and add them to the page
+          data.articles.forEach(article => {
+            const div = document.createElement('div');
+            div.classList.add('article');
+            div.innerHTML = `
+              <h2>${article.title}</h2>
+              <p>${article.description}</p>
+              <a href="${article.url}">Read more</a>
+            `;
+            document.querySelector('#news-container').appendChild(div);
+          });
+        });
+    </script>
+  </body>
+</html>
